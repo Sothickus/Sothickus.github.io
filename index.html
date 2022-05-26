@@ -2,17 +2,17 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    
 </head>
-    <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
-    <script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
-    <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script> 
 <body style='margin : 0px; overflow: hidden;'>
     <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false;'>
         <a-assets>
             <a-asset-item id="bigcountry" src="https://raw.githubusercontent.com/Sothickus/3DModels/main/bigcounty.gltf"></a-asset-item>
         </a-assets>
         <a-marker type='pattern' preset='custom' url='https://raw.githubusercontent.com/Sothickus/3DModels/main/pattern-pattern-arjs-marker.patt'>
-            <a-entity gltf-model="bigcountry" scale="10"></a-entity>
+            <a-entity gltf-model="bigcountry" scale="10" position="0 0 0"></a-entity>
         </a-marker>
     </a-scene>
     <a-entity camera></a-entity>
