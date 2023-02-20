@@ -1,0 +1,10 @@
+{
+	"data":[
+		"production":[
+			{ "Year":2022, "Qty":15, "Type":"LIVESTOCK" }
+			, { "Year":2021, "Qty":12, "Type":"LIVESTOCK" }
+		]
+
+	]
+	
+}
