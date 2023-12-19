@@ -13,11 +13,21 @@
             function getUrlParams(){
                 const queryString = window.location.search;
                 const urlParams = new URLSearchParams(queryString);
+                var element = document.getElementById('debug');
+                
+                urlParams.keys().forEach(key => {
+                        element.innerText += `\r\n${key} ${urlParams.get(key)}`;
+                });
+                
                 console.log(queryString);
             }
+
         </script>
     </head>
     <body onload="getUrlParams()">
+        <p id="debug">
+
+        </p>
 
     </body>
            
