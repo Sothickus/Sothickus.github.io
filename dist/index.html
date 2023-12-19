@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="globals.css" />
+    <title>Document</title>
+    <script>
+      function getParams(){
+          const queryString = window.location.search;
+          const urlParams = new URLSearchParams(queryString);
+          console.log(urlParams);
+          const element = document.getElementById('root');
+          element.setAttribute('data-param', queryString);
+          
+      }
+    </script>
+  </head>
+  <body onload="getParams()">
+    <div id="root" data-param=""></div>
+    <script src="bundle.js"></script>
+  </body>
+</html>
