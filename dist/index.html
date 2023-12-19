@@ -11,9 +11,8 @@
           const queryString = window.location.search;
           const urlParams = new URLSearchParams(queryString);
           console.log(urlParams);
-          const element = document.getElementById('root');
-          element.setAttribute('data-param', queryString);
-          
+          const rootElement = document.getElementById('root');
+          rootElement?.setAttribute('data-param', queryString);          
       }
     </script>
   </head>
