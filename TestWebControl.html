@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <meta
+            name="description"
+            content="Test Web Control"
+            />
+        <title>Test Web Control</title>
+        <script>
+            function getUrlParams(){
+                const queryString = window.location.search;
+                const urlParams = new URLSearchParams(queryString);
+                console.log(queryString);
+            }
+        </script>
+    </head>
+    <body onload="getUrlParams()">
+
+    </body>
+           
+</html>
