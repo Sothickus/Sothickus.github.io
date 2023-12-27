@@ -11,9 +11,10 @@
           const queryString = window.location.search;
           const urlParams = new URLSearchParams(queryString);
           console.log(queryString);
+          var readings = urlParams.get('readings');
           const rootElement = document.getElementById('root');
-          rootElement?.setAttribute('data-param', queryString);          
-          console.log(rootElement);
+          rootElement?.setAttribute('data-param', readings);          
+          console.log(readings);
       }
     </script>
   </head>
