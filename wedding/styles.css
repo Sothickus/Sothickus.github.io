@@ -76,21 +76,7 @@ body{
     margin-bottom:20px;
 }
 
-.text-small{
-    font-size:15px;
-}
-.text-medium{
-    font-size:45px;
-}
-.text-large{
-    font-size: 100px;
-}
-.text-extra-large{
-    font-size:125px;
-}
-.text-30{
-    font-size:30px;
-}
+
 .right-border{
     border-right:2px solid lightslategray;
 }
