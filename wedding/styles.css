@@ -101,3 +101,6 @@ body{
 .img-src-joey{
     background-image: url('https://via.placeholder.com/200x200');
 }
+.logo-image{
+    width:200px;
+}
