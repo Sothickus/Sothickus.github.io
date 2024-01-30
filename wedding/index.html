@@ -83,6 +83,8 @@
                     </li>
                       <li class="nav-item"><a href="#registry" class="nav-link link-dark text-secondary">REGISTRY</a>
                     </li>
+                    <li class="nav-item"><a href="#rsvp" class="nav-link link-dark text-secondary">RSVP</a>
+                    </li>
                     </ul>
                 </header>
             </nav>
@@ -127,7 +129,7 @@
                 <br />
                 <div class="row">
                     <div class="text-center">
-                        <a class="btn btn-secondary" href="mailto:joseph.lamont.martin@gmail.com?subject=RSVP&body=Please%20enter%20name(s)%20below%20for%20RSVP%0DName:%20%0DPlus%20One:">RSVP</a>
+                        <a class="btn btn-secondary" href="#rsvp">RSVP</a>
                     </div>
                     
                 </div>
@@ -485,9 +487,52 @@
                     </div>
                 </div>
             </div>
+            <div class="container bg-whitesmoke w-75 mx-auto mt-3" id="rsvp">
+                <div class="row mt-2">
+                    <div class="col text-center fs-2">RSVP</div>
+                </div>
+                <div class="row bg-gray w-75 mx-auto my-3" style="height:2px"></div>
+                <div class="row w-75 mx-auto">
+                    <div class="form">
+                        <div class="mb-2">
+                            <label for="attendingname" class="form-label">Your Name</label>
+                            <input type="text" name="attendingname" id="attendingname" placeholder="Your Name" class="form-control">
+                        </div>
+                        <div class="mb-2">
+                            <label for="additionalname" class="form-label">Your Plus 1 Name</label>
+                            <input type="text" name="additionalname" id="additionalname" placeholder="Your Plus 1 Name" class="form-control">
+                        </div>
+                        <div class="mb-2">
+                            <label for="responseemail" class="form-label">Your Email</label>
+                            <input type="email" name="responseemail" id="responseemail" placeholder="Your Email" class="form-control">
+                        </div>
+                        <div class="mb-2 form-check">
+                            <input type="checkbox" name="isattending" id="isattending" class="form-check-input">
+                            <label for="isattending" class="form-label">We Will Be Attending</label>                           
+                        </div>
+                        
+                        <button type="submit" class="submit btn btn-secondary" onclick="submitRSVP()">Submit</button>
+                    </div>
+                </div>
+            </div>
         </main>
     
-    
+        <script>
+            function submitRSVP(){
+                var aname = document.getElementsByName('attendingname')[0].value;
+                var pname = document.getElementsByName('additionalname')[0].value;
+                var remail = document.getElementsByName('responseemail')[0].value;
+                var isAttending = document.getElementsByName('isattending')[0].value;
+
+                var mailString = "mailto:joseph.lamont.martin@gmail.com?subject=Wedding%20RSVP&body=";
+                mailString += ( isAttending ? "We%20will%20be%20attending" : "We%20will%20not%20be%20attending" );
+                mailString += "%0D" + aname;
+                mailString += "%0D" + pname;
+                mailString += "%0D" + remail;
+                window.open(mailString);
+
+            }
+        </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </body>
 </html>
