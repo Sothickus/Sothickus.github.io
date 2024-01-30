@@ -61,25 +61,7 @@
                 border-radius: 5px;
                 padding-top:20px;
             }
-            .left-name-text{      
-                font-weight: 400;
-                font-size: 100pt;
-                align-items: flex-end;
-                text-align: right;
-                text-wrap: wrap;
-            }
-            .right-name-text{         
-                font-weight: 400;
-                font-size: 100pt;
-                align-items: flex-start;
-                text-align: left;
-                text-wrap: wrap;
-            }
-            .text-centered{
-                text-align: center;
-                margin-top:auto;
-                margin-bottom:auto;
-            }
+                      
             .row-divider{
                 width:80%;
                 height:2px;
@@ -90,33 +72,6 @@
                 margin-bottom:20px;
             }
             
-            .right-border{
-                border-right:2px solid lightslategray;
-            }
-            .profile-list-item{
-                display:flex;
-                flex-direction: row;
-
-            }
-            .profile-text-container{
-                display:flex;
-                flex-direction: column;
-            }
-            .profile-image{
-                display:inline-block;
-                width:100px;
-                height:100px;
-                border-radius: 50%;
-                background-repeat: no-repeat;
-                background-position: center center;
-                background-size: cover;
-            }
-            .img-src-joey{
-                background-image: url('https://via.placeholder.com/200x200');
-            }
-            .img-src-gemma{
-                background-image: url('images/gemma.jpg');
-            }
             
         </style>
     </head>
@@ -149,40 +104,43 @@
             
             <img src="https://images.zola.com/345560d5-1d6f-4193-bbc5-cedff94021d1?w=2000" class="main-image"/>
             
-            <div class="container text-container">
+            <div class="container text-container  ">
                 <div class="row mt-4">
-                    <div class="col-5 left-name-text">
+                    <div class="col-5 text-end d-flex flex-column">
                         <h2>Joseph</h2>
                         <h2>Martin</h2>
                     </div>    
-                    <div class="col-2 text-centered">
+                    <div class="col-2 d-flex flex-column text-center justify-content-center align-items-center">
                         <span>and</span>
                     </div>
-                    <div class="col-5 right-name-text">
+                    <div class="col-5 text-start d-flex flex-column">
                         <h2>Stevie</h2>
                         <h2>Johns</h2>
                     </div>           
                 </div>
                 <div class="row row-divider"></div>
                 <div class="row">
-                    <div class="col text-centered">
+                    <div class="col text-center">
                         <h6>The Union of Two Soulmates</h6>
                         <h3 >MAY 4, 2024</h3>
                         <span>Lititz, PA</span>
                     </div>
                 </div>
                 <div class="row row-divider"></div>
-                <div class="row">
-                    <div class="col text-centered right-border">
+                <div class="row px-2">
+                    <div class="d-md-none col-12">
+                        <h2 class="border-2 border-bottom border-secondary text-center">YOU'RE INVITED!</h2>
+                    </div>
+                    <div class="d-none d-md-flex flex-row-reverse align-items-center col-6 border-2 border-end border-secondary">
                         <h2>YOU'RE INVITED!</h2>
                     </div>
-                    <div class="col text-start text-centered pe-5">
+                    <div class="col-xs-12 col-md-6 text-start">
                         <p>If you've found this website you must have already received our Save The Date. You are very special to us and we can't wait to share our special day with you. Formal invitations to follow!</p>
                     </div>
                 </div>
                 <br />
                 <div class="row">
-                    <div class="text-centered">
+                    <div class="text-center">
                         <a class="btn btn-secondary" href="mailto:joseph.lamont.martin@gmail.com?subject=RSVP&body=Please%20enter%20name(s)%20below%20for%20RSVP%0DName:%20%0DPlus%20One:">RSVP</a>
                     </div>
                     
@@ -192,68 +150,93 @@
             </div>
             <div class="container text-container mt-5 mb-5" id="travel">
                 <div class="row">
-                    <div class="col text-centered fs-2">Travel Information</div>
+                    <div class="col text-center fs-2">Travel Information</div>
                 </div>
                 <div class="row row-divider"></div>
-                <div class="row">
-                    <div class="col text-centered right-border">
+                <div class="row px-3">
+                    <div class="d-flex flex-column d-md-none col-12 border-2 border-bottom border-secondary align-items-center justify-content-center">
                         <span class="material-symbols-outlined">flight</span>
                         <h2>MDT</h2>
                         <h6>Harrisburg International Airport</h6>
                     </div>
-                    <div class="col text-start text-centered pe-5">
+                    <div class="d-none d-md-flex flex-column align-items-center col-6 border-2 border-end border-secondary justify-content-center">
+                        <span class="material-symbols-outlined">flight</span>
+                        <h2>MDT</h2>
+                        <h6>Harrisburg International Airport</h6>
+                    </div>
+                    <div class="col-xs-12 col-md-6 text-start">
                         <p>Harrisburg is the closest airport to our venues (31 Miles). It is smaller than Philadelphia Airport but still has many airlines</p>
                         <a class="btn btn-secondary" href="https://www.flyhia.com/" role="button" target="_blank">View</a>
                         <a class="btn btn-secondary" href="https://www.google.com/maps/place/Harrisburg+International+Airport/@40.1942375,-76.7576672,15z/data=!4m6!3m5!1s0x89c8be20907790df:0x35bf2b1592c226fa!8m2!3d40.1942375!4d-76.7576672!16zL20vMDFzX2w2?entry=ttu" role="button" target="_blank">Map</a>
                     </div>
                 </div>
                 <br />
-                <div class="row">
-                    <div class="col text-centered right-border">
+                <div class="row px-3">
+                    <div class="d-flex flex-column d-md-none col-12 border-2 border-bottom border-secondary align-items-center justify-content-center">
                         <span class="material-symbols-outlined">flight</span>
                         <h2>PHL</h2>
                         <h6>Philadelphia International Airport</h6>
                     </div>
-                    <div class="col text-start text-centered pe-5">
+                    <div class="d-none d-md-flex flex-column align-items-center col-6 border-2 border-end border-secondary justify-content-center">
+                        <span class="material-symbols-outlined">flight</span>
+                        <h2>PHL</h2>
+                        <h6>Philadelphia International Airport</h6>
+                    </div>
+                    <div class="col-xs-12 col-md-6 text-start">
                         <p> Philadelphia Airport is the largest airport in the state and is 84 miles from our venues. PHL will offer the most variety of flight times and airlines.</p>
                         <a class="btn btn-secondary" href="https://www.phl.org/" role="button" target="_blank">View</a>
                         <a class="btn btn-secondary" href="https://www.google.com/maps/place/Philadelphia+International+Airport/@39.8729797,-75.2436987,15z/data=!4m2!3m1!1s0x0:0x3e2e15944637d3d8?sa=X&ved=2ahUKEwiG37jt9YKEAxVvIjQIHSspAogQ_BJ6BAgPEAA" role="button" target="_blank">Map</a>
                     </div>
                 </div>
                 <br />
-                <div class="row">
-                    <div class="col text-centered right-border">
+                <div class="row px-3">
+                    <div class="d-flex flex-column d-md-none col-12 border-2 border-bottom border-secondary align-items-center justify-content-center">
                         <span class="material-symbols-outlined">hotel</span>
                         <h2>Wilbur Lititz</h2>
-                        <h6>50 North Broad Street, Lititz, PA, 17543, US</h6>
+                        <h6>50 North Broad Street, Lititz, PA, 17543</h6>
                     </div>
-                    <div class="col text-start text-centered pe-5">
+                    <div class="d-none d-md-flex flex-column align-items-center col-6 border-2 border-end border-secondary justify-content-center">
+                        <span class="material-symbols-outlined">hotel</span>
+                        <h2>Wilbur Lititz</h2>
+                        <h6>50 North Broad Street, Lititz, PA, 17543</h6>
+                    </div>
+                    <div class="col-xs-12 col-md-6 text-start">
                         <p>The Wilbur Lititz will offer guests the uncommon experience of staying in the former Wilbur Chocolate Factory. Conveniently located next to The Blackworth Live Fire Grill , downtown eateries and bakeries, and Lititz Springs Park.  The reception will be held at the Hotel, in the Blackworth Restaurant on the first floor.</p>
                         <a class="btn btn-secondary" href="https://thewilburhotel.com/" role="button" target="_blank">View</a>
                         <a class="btn btn-secondary" href="https://www.google.com/maps/place/The+Wilbur+Lititz,+Tapestry+Collection+by+Hilton/@40.1587022,-76.3102724,17z/data=!3m1!4b1!4m9!3m8!1s0x89c619ae67f0cd11:0x3f2b2d7a64b9be63!5m2!4m1!1i2!8m2!3d40.1586981!4d-76.3076975!16s%2Fg%2F11fktgmwct?entry=ttu" role="button" target="_blank">Map</a>
                     </div>
                 </div>
                 <br />
-                <div class="row">
-                    <div class="col text-centered right-border">
+                <div class="row px-3">
+                    <div class="d-flex flex-column d-md-none col-12 border-2 border-bottom border-secondary align-items-center justify-content-center">
                         <span class="material-symbols-outlined">hotel</span>
                         <h2>Hotel Rock Lititz</h2>
                         <h6>50 Rock Lititz Blvd, Lititz, PA</h6>
                     </div>
-                    <div class="col text-start text-centered pe-5">
+                    <div class="d-none d-md-flex flex-column align-items-center col-6 border-2 border-end border-secondary justify-content-center">
+                        <span class="material-symbols-outlined">hotel</span>
+                        <h2>Hotel Rock Lititz</h2>
+                        <h6>50 Rock Lititz Blvd, Lititz, PA</h6>
+                    </div>
+                    <div class="col-xs-12 col-md-6 text-start">
                         <p>Upscale accommodations surrounded by materials that capture the essence of concert touring from road case doors to backstage pass wallpaper.  The hotel Rock Lititz is 1.4 miles from the reception venue.</p>
                         <a class="btn btn-secondary" href="https://www.hotelrocklititz.com/" role="button" target="_blank">View</a>
                         <a class="btn btn-secondary" href="https://www.google.com/maps/place/Hotel+Rock+Lititz/@40.1744372,-76.314985,17z/data=!3m1!4b1!4m9!3m8!1s0x89c61959c9df2f27:0xe00a771b406be0e6!5m2!4m1!1i2!8m2!3d40.1744331!4d-76.3124101!16s%2Fg%2F11f9yyckxx?entry=ttu" role="button" target="_blank">Map</a>
                     </div>
                 </div>
                 <br />
-                <div class="row">
-                    <div class="col text-centered right-border">
+                <div class="row px-3">
+                    <div class="d-flex flex-column d-md-none col-12 border-2 border-bottom border-secondary align-items-center justify-content-center">
                         <span class="material-symbols-outlined">church</span>
                         <h2>ST Johns Center UCC</h2>
                         <h6>432 Reading Road East Earl, PA 17519</h6>
                     </div>
-                    <div class="col text-start text-centered pe-5">
+                    <div class="d-none d-md-flex flex-column align-items-center col-6 border-2 border-end border-secondary justify-content-center">
+                        <span class="material-symbols-outlined">church</span>
+                        <h2>ST Johns Center UCC</h2>
+                        <h6>432 Reading Road East Earl, PA 17519</h6>
+                    </div>
+                    <div class="col-xs-12 col-md-6 text-start">
                         <p>The Ceremony will be held at St Johns Center UCC, located in East Earl, PA.  
                             Due to space limitations the ceremony will be limited to the family and wedding party.  The ceremony will be streamed and recorded on youtube.  The recording will be played at the reception for any interested parties.</p>
                         <a class="btn btn-secondary" href="https://www.stjohnscenterucc.org/" role="button" target="_blank">View</a>
@@ -261,66 +244,89 @@
                     </div>
                 </div>
                 <br />
-                <div class="row">
-                    <div class="col text-centered right-border">
+                <div class="row px-3">
+                    <div class="d-flex flex-column d-md-none col-12 border-2 border-bottom border-secondary align-items-center justify-content-center">
                         <span class="material-symbols-outlined">festival</span>
                         <h2>Blackworth Live Fire Grill</h2>
-                        <h6>50 North Broad Street, Lititz, PA, 17543, US</h6>
+                        <h6>50 North Broad Street, Lititz, PA, 17543</h6>
                     </div>
-                    <div class="col text-start text-centered pe-5">
+                    <div class="d-none d-md-flex flex-column align-items-center col-6 border-2 border-end border-secondary justify-content-center">
+                        <span class="material-symbols-outlined">festival</span>
+                        <h2>Blackworth Live Fire Grill</h2>
+                        <h6>50 North Broad Street, Lititz, PA, 17543</h6>
+                    </div>
+                    <div class="col-xs-12 col-md-6 text-start">
                         <p>The Reception will be held at Blackworth Live Fire Grill, on the first floor of the Wilbur Hotel.  We invite everyone to drop by and celebrate with us on our special day.</p>
                         <a class="btn btn-secondary" href="https://www.blackworthlititz.com/" role="button" target="_blank">View</a>
                         <a class="btn btn-secondary" href="https://www.google.com/maps/place/Blackworth+Live+Fire+Grill/@40.158617,-76.3101599,17z/data=!3m1!4b1!4m6!3m5!1s0x89c6192c4007b601:0xbcb7e3c8ba1b9bad!8m2!3d40.1586129!4d-76.307585!16s%2Fg%2F11h5dr7tlm?entry=ttu" role="button" target="_blank">Map</a>
                     </div>
                 </div>
                 <br />
+                
             </div>
             <div class="container text-container mt-5 mb-5" id="schedule">
                 <div class="row">
-                    <div class="col text-centered fs-2">Schedule of Events</div>
+                    <div class="col text-center fs-2">Schedule of Events</div>
                 </div>
                 <div class="row row-divider"></div>
-                <div class="row">
-                    <div class="col text-end right-border">
+                <div class="row px-2">
+                    <div class="d-flex flex-column d-md-none col-12 border-2 border-bottom border-secondary align-items-center justify-content-center">
                         <h6>Ceremony</h6>
                         <h2 >ST JOHNS CENTER UCC</h2>
                         <h6>432 Reading Road East Earl, PA 17519</h6>
                     </div>
-                    <div class="col text-start pe-5">
-                        <div class="fs-3">3:00 PM</div>
+                    <div class="d-none d-md-flex flex-column align-items-end col-6 border-2 border-end border-secondary justify-content-end text-end">
+                        <h6>Ceremony</h6>
+                        <h2 >ST JOHNS CENTER UCC</h2>
+                        <h6>432 Reading Road East Earl, PA 17519</h6>
                     </div>
+                    <div class="col-xs-12 col-md-6 text-start">
+                        <div class="fs-3">3:00 PM</div>
+                    </div>            
                 </div>
                 <br />
-                <div class="row">
-                    <div class="col text-end right-border">
+                <div class="row px-2">
+                    <div class="d-flex flex-column d-md-none col-12 border-2 border-bottom border-secondary align-items-center justify-content-center">
                         <h6>Pictures</h6>
                         <h2 >LITITZ SPRINGS PARK</h2>
-                        <h6>50 North Broad Street, Lititz, PA, 17543, US</h6>
+                        <h6>50 North Broad Street, Lititz, PA, 17543</h6>
                     </div>
-                    <div class="col text-start pe-5">
+                    <div class="d-none d-md-flex flex-column align-items-end col-6 border-2 border-end border-secondary justify-content-end text-end">
+                        <h6>Pictures</h6>
+                        <h2 >LITITZ SPRINGS PARK</h2>
+                        <h6>50 North Broad Street, Lititz, PA, 17543</h6>
+                    </div>
+                    <div class="col-xs-12 col-md-6 text-start">
                         <div class="fs-3">4:00 PM</div>
-                    </div>
+                    </div>            
                 </div>
                 <br />
-                <div class="row">
-                    <div class="col text-end right-border">
+                <div class="row px-2">
+                    <div class="d-flex flex-column d-md-none col-12 border-2 border-bottom border-secondary align-items-center justify-content-center">
                         <h6 >Reception</h6>
                         <h2 >BLACKWORTH</h2>
                         <h2 >LIVE FIRE GRILL</h2>
-                        <h6>50 North Broad Street, Lititz, PA, 17543, US</h6>
+                        <h6>50 North Broad Street, Lititz, PA, 17543</h6>
                     </div>
-                    <div class="col text-start pe-5">
+                    <div class="d-none d-md-flex flex-column align-items-end col-6 border-2 border-end border-secondary justify-content-end text-end">
+                        <h6 >Reception</h6>
+                        <h2 >BLACKWORTH</h2>
+                        <h2 >LIVE FIRE GRILL</h2>
+                        <h6>50 North Broad Street, Lititz, PA, 17543</h6>
+                    </div>
+                    <div class="col-xs-12 col-md-6 text-start">
                         <div class="fs-3">5:00 PM Social Hour</div>
                         <div class="fs-3">6:00 PM Meal</div>
                         <div class="fs-3">7:00 PM Dancing and Socializing</div>
                         <div class="fs-3">9:00 PM End</div>
-                    </div>
+                    </div>            
                 </div>
                 <br />
+           
             </div>
             <div class="container text-container mt-5 mb-5" id="wedding-party">
                 <div class="row">
-                    <div class="col text-centered fs-2">Meet the Wedding Party</div>
+                    <div class="col text-center fs-2">Meet the Wedding Party</div>
                 </div>
                 <div class="row row-divider"></div>
                 <div class="row">
