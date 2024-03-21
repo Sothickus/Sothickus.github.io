@@ -1,18 +1,412 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-</head>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+        <link href="styles.css" rel="stylesheet" />
+        
+        <title>Stevie and Monty</title>
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <style>
+            html {
+                scroll-behavior: smooth;
+            }
+            body{
+                background-color: rgba(188, 178, 255, 0.863);
+                padding:0;
+                font-family: circular,serif;    
+            }
+           
+            .fancy-text{
+                font-family: 'Brush Script MT', cursive;
+                font-weight: 400;
+                font-size: 63px;
+            }
 
-<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+            
+            
+            .nav-link{
+                display: inline-block;
+                position: relative;
+                
+            }
+            .nav-link::after{
+                content: '';
+                position: absolute;
+                width: 100%;
+                transform: scaleX(0);
+                height: 3px;
+                bottom: 0;
+                left: 0;
+                background-color: rgb(74, 6, 138);
+                transform-origin: bottom right;
+                transition: transform 0.25s ease-out;
+            }
+            .nav-link:hover::after{
+                transform: scaleX(1);
+                transform-origin: bottom left;
+            }
+  
+            .bg-whitesmoke{
+                background-color: whitesmoke;
+            }
+            .bg-gray{
+                background-color: lightslategray;
+            }
+           
+            
+        </style>
+    </head>
+    <body>
+        <main>
+            <header class="py-1 bg-light">
+                <div class="container d-flex flex-column flex-wrap justify-content-center">
+                  <h1 class="fancy-text text-center">Stevie And Monty</h1>
+                  
+                </div>                
+            </header>
+            <nav class="bg-light border-bottom">
+                <header class="d-flex justify-content-center py-1">
+                    <ul class="nav">
+                      <li class="nav-item">
+                        <a href="#" class="nav-link link-dark active text-secondary" aria-current="page">HOME</a>
+                    </li>
+                    <li class="nav-item"><a href="#travel" class="nav-link link-dark text-secondary">TRAVEL</a>
+                    </li>
+                    <li class="nav-item"><a href="#schedule" class="nav-link link-dark text-secondary">SCHEDULE</a>
+                    </li>
+                      <li class="nav-item"><a href="#wedding-party" class="nav-link link-dark text-secondary">WEDDING PARTY</a>
+                    </li>
+                      <li class="nav-item"><a href="#photos" class="nav-link link-dark text-secondary">PHOTOS</a>
+                    </li>
+                      <li class="nav-item"><a href="#registry" class="nav-link link-dark text-secondary">REGISTRY</a>
+                    </li>
+                    <li class="nav-item"><a href="#rsvp" class="nav-link link-dark text-secondary">RSVP</a>
+                    </li>
+                    </ul>
+                </header>
+            </nav>
+            
+            <img src="https://images.zola.com/345560d5-1d6f-4193-bbc5-cedff94021d1?w=2000" class="w-100"/>
+            
+            <div class="container bg-whitesmoke w-75 mx-auto mt-3">
+                <br />
+                <div class="row mt-4">
+                    <div class="col-5 text-end d-flex flex-column">
+                        <h2>Joseph</h2>
+                        <h2>Martin</h2>
+                    </div>    
+                    <div class="col-2 d-flex flex-column text-center justify-content-center align-items-center">
+                        <span>and</span>
+                    </div>
+                    <div class="col-5 text-start d-flex flex-column">
+                        <h2>Stevie</h2>
+                        <h2>Johns</h2>
+                    </div>           
+                </div>
+                <div class="row bg-gray w-75 mx-auto my-3" style="height:2px"></div>
+                <div class="row">
+                    <div class="col text-center">
+                        <h6>The Union of Two Soulmates</h6>
+                        <h3 >MAY 4, 2024</h3>
+                        <span>Lititz, PA</span>
+                    </div>
+                </div>
+                <div class="row bg-gray w-75 mx-auto my-3" style="height:2px"></div>
+                <div class="row px-2">
+                    <div class="d-md-none col-12">
+                        <h2 class="border-2 border-bottom border-secondary text-center">YOU'RE INVITED!</h2>
+                    </div>
+                    <div class="d-none d-md-flex flex-row-reverse align-items-center col-6 border-2 border-end border-secondary">
+                        <h4>YOU'RE INVITED!</h4>
+                    </div>
+                    <div class="col-xs-12 col-md-6 text-start">
+                        <p>If you've found this website you must have already received our Save The Date. You are very special to us and we can't wait to share our special day with you.</p>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="text-center">
+                        <a class="btn btn-secondary" href="#rsvp">RSVP</a>
+                    </div>
+                    
+                </div>
+                <br />
+                               
+            </div>
+            <div class="container bg-whitesmoke w-75 mx-auto mt-3" id="travel">
+                <div class="row mt-2">
+                    <div class="col text-center fs-2">Travel Information</div>
+                </div>
+                <div class="row bg-gray w-75 mx-auto my-3" style="height:2px"></div>
+                
+                <div class="row px-3">
+                    <div class="d-flex flex-column d-md-none col-12 border-2 border-bottom border-secondary align-items-center justify-content-center">
+                        <span class="material-symbols-outlined">festival</span>
+                        <h2>Blackworth Live Fire Grill</h2>
+                        <h6>50 North Broad Street, Lititz, PA, 17543</h6>
+                    </div>
+                    <div class="d-none d-md-flex flex-column align-items-center col-6 border-2 border-end border-secondary justify-content-center">
+                        <span class="material-symbols-outlined">festival</span>
+                        <h2>Blackworth Live Fire Grill</h2>
+                        <h6>50 North Broad Street, Lititz, PA, 17543</h6>
+                    </div>
+                    <div class="col-xs-12 col-md-6 text-start">
+                        <p>The Reception will be held at Blackworth Live Fire Grill, on the first floor of the Wilbur Hotel.  We invite everyone to drop by and celebrate with us on our special day.</p>
+                        <a class="btn btn-secondary" href="https://www.blackworthlititz.com/" role="button" target="_blank">View</a>
+                        <a class="btn btn-secondary" href="https://www.google.com/maps/place/Blackworth+Live+Fire+Grill/@40.158617,-76.3101599,17z/data=!3m1!4b1!4m6!3m5!1s0x89c6192c4007b601:0xbcb7e3c8ba1b9bad!8m2!3d40.1586129!4d-76.307585!16s%2Fg%2F11h5dr7tlm?entry=ttu" role="button" target="_blank">Map</a>
+                    </div>
+                </div>
+                <br />
+                
+            </div>
+            <div class="container bg-whitesmoke w-75 mx-auto mt-3" id="schedule">
+                <div class="row mt-2">
+                    <div class="col text-center fs-2">Schedule of Events</div>
+                </div>
+                <div class="row bg-gray w-75 mx-auto my-3" style="height:2px"></div>
+            
+                <div class="row px-2">
+                    <div class="d-flex flex-column d-md-none col-12 border-2 border-bottom border-secondary align-items-center justify-content-center text-center">
+                        <small class="text-muted">CELEBRATION</small>
+                        <h2 >BLACKWORTH</h2>
+                        <h2 >LIVE FIRE GRILL</h2>
+                        <small class="text-muted">50 North Broad Street, Lititz, PA, 17543</small>
+                    </div>
+                    <div class="d-none d-md-flex flex-column align-items-end col-6 border-2 border-end border-secondary justify-content-center text-end">
+                        <small class="text-muted">CELEBRATION</small>
+                        <h2 >BLACKWORTH</h2>
+                        <h2 >LIVE FIRE GRILL</h2>
+                        <small class="text-muted">50 North Broad Street, Lititz, PA, 17543</small>
+                    </div>
+                    <div class="col-xs-12 col-md-6 text-start">
+                        <div class="fs-3">5:00 PM Start *</div>                        
+                        <div class="fs-3">10:00 PM End *</div>
+                    </div>            
+                </div>
+                <br />
+                <div class="row px-2">
+                    <div class="col col-12 text-start text-muted">
+                        <p>
+                            * Guests are encouraged to drop in at any time during the celebration.  Food, drinks and appetizers will be available
+                            at any time throughout the night.  There will be no formal seating arrangements or scheduled meal.  Everyone is encouraged to 
+                            attend when they are able, and share in the celebration of the union of two soulmates.
+                        </p>
+                    </div>                    
+                </div>
+            </div>
+            <div class="container bg-whitesmoke w-75 mx-auto mt-3" id="wedding-party">
+                <div class="row mt-2">
+                    <div class="col text-center fs-2">Meet the Wedding Party</div>
+                </div>
+                <div class="row bg-gray w-75 mx-auto my-3" style="height:2px"></div>
+                <div class="row">
+                    <div class="col">
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex flex-column flex-md-row justify-content-center
+                                justify-content-md-start align-items-center align-items-md-start">
+                                <img class="rounded-circle" src="images/monty-profile-1.png" style="width:100px;height:100px" />
+                                <div class="d-flex flex-column ms-md-5">
+                                    <h2>Joseph Martin</h2>
+                                    <span class="text-muted fs-6">GROOM</span>
+                                    <p class="fs-6"></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex flex-column flex-md-row justify-content-center
+                                justify-content-md-start align-items-center align-items-md-start">
+                                <img class="rounded-circle" src="images/joey-profile-1.png" style="width:100px;height:100px" />
+                                <div class="d-flex flex-column ms-md-5">
+                                    <h2>Joseph Starkey</h2>
+                                    <span class="text-muted fs-6">GROOMSMAN</span>
+                                    <p class="fs-6">Friend of the Groom</p>
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex flex-column flex-md-row justify-content-center
+                                justify-content-md-start align-items-center align-items-md-start">
+                                <img class="rounded-circle" src="images/jason-profile-1.png" style="width:100px;height:100px" />
+                                <div class="d-flex flex-column ms-md-5">
+                                    <h2>Jason Starkey</h2>
+                                    <span class="text-muted fs-6">GROOMSMAN</span>
+                                    <p class="fs-6">Friend of the Groom</p>
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex flex-column flex-md-row justify-content-center
+                                justify-content-md-start align-items-center align-items-md-start">
+                                <img class="rounded-circle" src="images/brandon-profile-1.png" style="width:100px;height:100px" />
+                                <div class="d-flex flex-column ms-md-5">
+                                    <h2>Brandon Arnold</h2>
+                                    <span class="text-muted fs-6">GROOMSMAN</span>
+                                    <p class="fs-6">Brother in Law of the Bride</p>
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex flex-column flex-md-row justify-content-center
+                                justify-content-md-start align-items-center align-items-md-start">
+                                <img class="rounded-circle" src="images/gemma.jpg" style="width:100px;height:100px" />
+                                <div class="d-flex flex-column ms-md-5">
+                                    <h2>Gemma Martin</h2>
+                                    <span class="text-muted fs-6">RING BEARER</span>
+                                    <p class="fs-6">Cutest Pup in the world.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex flex-column flex-md-row justify-content-center
+                                justify-content-md-start align-items-center align-items-md-start">
+                                <img class="rounded-circle" src="images/stevie-profile-1.png" style="width:100px;height:100px" />
+                                <div class="d-flex flex-column ms-md-5">
+                                    <h2>Stevie Johns</h2>
+                                    <span class="text-muted fs-6">BRIDE</span>
+                                    <p class="fs-6"></p>
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex flex-column flex-md-row justify-content-center
+                                justify-content-md-start align-items-center align-items-md-start">
+                                <img class="rounded-circle" src="images/britt-profile-1.png" style="width:100px;height:100px" />
+                                <div class="d-flex flex-column ms-md-5">
+                                    <h2>Brittney Arnold</h2>
+                                    <span class="text-muted fs-6">MAID OF HONOR</span>
+                                    <p class="fs-6">Sister of the Bride.</p>
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex flex-column flex-md-row justify-content-center
+                                justify-content-md-start align-items-center align-items-md-start">
+                                <img class="rounded-circle" src="images/kailie-profile-1.png" style="width:100px;height:100px" />
+                                <div class="d-flex flex-column ms-md-5">
+                                    <h2>Kailie Hadden</h2>
+                                    <span class="text-muted fs-6">BRIDESMAID</span>
+                                    <p class="fs-6">Niece of the Bride</p>
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex flex-column flex-md-row justify-content-center
+                                justify-content-md-start align-items-center align-items-md-start">
+                                <img class="rounded-circle" src="images/kiersten-profile-1.png" style="width:100px;height:100px" />
+                                <div class="d-flex flex-column ms-md-5">
+                                    <h2>Kierstyn Merschen</h2>
+                                    <span class="text-muted fs-6">BRIDESMAID</span>
+                                    <p class="fs-6">Niece of the Bride</p>
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex flex-column flex-md-row justify-content-center
+                                justify-content-md-start align-items-center align-items-md-start">
+                                <img class="rounded-circle" src="images/miah-profile-1.png" style="width:100px;height:100px" />
+                                <div class="d-flex flex-column ms-md-5">
+                                    <h2>Miah Arnold</h2>
+                                    <span class="text-muted fs-6">FLOWER GIRL</span>
+                                    <p class="fs-6">Niece of the Bride</p>
+                                </div>
+                            </li>
+                                                      
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container bg-whitesmoke w-75 mx-auto mt-3" id="photos">
+                <div class="row mt-2">
+                    <div class="col text-center fs-2">Photos</div>
+                </div>
+                <div class="row bg-gray w-75 mx-auto my-3" style="height:2px"></div>
+                <div class="row">
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          
+                         <div class="carousel-item active">
+                            <img src="images/stevie-monty-1.JPEG" class="d-block w-100" alt="...">
+                          </div>
+                          
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                </div>
+            </div>
+            <div class="container bg-whitesmoke w-75 mx-auto mt-3" id="registry">
+                <div class="row mt-2">
+                    <div class="col text-center fs-2">Registry</div>
+                </div>
+                <div class="row ms-3 me-3">
+                    <p class="px-5"><small>*The bride and groom would love to provide you with alternatives to a traditional registry.  
+                        In addition to the below registries, donations can also be made to the organizations found below.</p></small>
+                </div>
+                <div class="row bg-gray w-75 mx-auto my-3" style="height:2px"></div>
+                <div class="row ms-3 me-3">
+                    <div class="col">
+                        <a href="https://www.amazon.com/hz/wishlist/ls/JD99NI9Y5PZ0?ref_=wl_share" target="_blank">
+                            <img class="logo-image" src="data:image/jpeg;base64,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">
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="https://bedbathandbeyond.myregistry.com/wedding-registry/joseph-martin-and-stevie-johns-lititz-pa/4142088" target="_blank">
+                            <img class="logo-image" src="data:image/jpeg;base64,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">
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="https://www.pa.gov/dmva/donate/" target="_blank">
+                            <img class="logo-image" src="https://www.pa.gov/dmva/donate/Images/LogoMFRAP.png" class="logo-image">
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="https://www.pspca.org/donate" target="_blank">
+                            <img class="logo-image" src="data:image/png;base64,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" class="logo-image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="container bg-whitesmoke w-75 mx-auto mt-3" id="rsvp">
+                <div class="row mt-2">
+                    <div class="col text-center fs-2">RSVP</div>
+                </div>
+                <div class="row bg-gray w-75 mx-auto my-3" style="height:2px"></div>
+                <div class="row w-75 mx-auto">
+                    <div class="form">
+                        <div class="mb-2">
+                            <label for="attendingname" class="form-label">Your Name</label>
+                            <input type="text" name="attendingname" id="attendingname" placeholder="Your Name" class="form-control">
+                        </div>
+                        <div class="mb-2">
+                            <label for="additionalname" class="form-label">Your Plus 1 Name</label>
+                            <input type="text" name="additionalname" id="additionalname" placeholder="Your Plus 1 Name" class="form-control">
+                        </div>
+                        <div class="mb-2">
+                            <label for="responseemail" class="form-label">Your Email</label>
+                            <input type="email" name="responseemail" id="responseemail" placeholder="Your Email" class="form-control">
+                        </div>
+                        <div class="mb-2 form-check">
+                            <input type="checkbox" name="isattending" id="isattending" class="form-check-input">
+                            <label for="isattending" class="form-label">We Will Be Attending</label>                           
+                        </div>
+                        
+                        <button type="submit" class="submit btn btn-secondary" onclick="submitRSVP()">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    
+        <script>
+            function submitRSVP(){
+                var aname = document.getElementsByName('attendingname')[0].value;
+                var pname = document.getElementsByName('additionalname')[0].value;
+                var remail = document.getElementsByName('responseemail')[0].value;
+                var isAttending = document.getElementsByName('isattending')[0].value;
 
-<body style='margin : 0px; overflow: hidden;'>
-    <div id="container">
-        <div id="aSide">
-            <model-viewer src="https://raw.githubusercontent.com/Sothickus/3DModels/main/bigcounty.gltf" alt="Big Country" auto-rotate camera-controls ar 
-            ios-src="https://raw.githubusercontent.com/Sothickus/3DModels/main/bigcounty.gltf"></model-viewer>
-        </div>      
-    </div>
-</body>
+                var mailString = "mailto:joseph.lamont.martin@gmail.com?subject=Wedding%20RSVP&body=";
+                mailString += ( isAttending ? "We%20will%20be%20attending" : "We%20will%20not%20be%20attending" );
+                mailString += "%0D" + aname;
+                mailString += "%0D" + pname;
+                mailString += "%0D" + remail;
+                window.open(mailString);
+
+            }
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
 </html>
